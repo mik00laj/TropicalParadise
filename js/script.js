@@ -4,11 +4,14 @@ const allNavItems = document.querySelectorAll('.nav__item')
 const burgerBtnBars = document.querySelector('.burger-btn__bars')
 const allSections = document.querySelectorAll('.section')
 const footerYear = document.querySelector('.footer__year')
+//mail
+const msgStatus = document.querySelector('.msg-status')
+
 
 const handleNav = () => {
 	navBox.classList.toggle('nav--active')
 	burgerBtnBars.classList.remove('black-bars-color')
-	
+
 	allNavItems.forEach(item => {
 		item.addEventListener('click', () => {
 			navBox.classList.remove('nav--active')
@@ -36,9 +39,6 @@ const handleObserver = () => {
 		} else if (!section.classList.contains('white-section') && section.offsetTop <= currentSection + 60) {
 			burgerBtnBars.classList.remove('black-bars-color')
 		}
-		// if (navBox.classList.contains('nav--active')) {
-		// 	burgerBtnBars.classList.remove('black-bars-color')
-		// }
 	})
 }
 
@@ -50,3 +50,21 @@ const handleCurrentYear = () => {
 handleCurrentYear()
 burgerBtn.addEventListener('click', handleNav)
 window.addEventListener('scroll', handleObserver)
+
+
+//mail
+if (document.location.search === '?mail_status=sent') {
+	msgStatus.classList.add('success')
+	msgStatus.textContent = 'Wiadomość wysłana'
+	setTimeout(() => {
+		msgStatus.classList.remove('msg-status--success')
+	},3000)
+}
+if (document.location.search === '?mail_status=error') {
+	msgStatus.classList.add('error')
+	msgStatus.textContent = 'Wystąpił bład'
+	setTimeout(() => {
+		msgStatus.classList.remove('msg-status--error')
+	},3000)
+}
+//mail

@@ -15,7 +15,7 @@
     <link rel="stylesheet" href="./css/style.css">
     <script src="https://kit.fontawesome.com/1946f486ca.js" crossorigin="anonymous"></script>
     <title>Tropical Paradise</title>
-    <link rel="icon" type="image/x-icon" href="./img/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/x-icon" href="./img/favicon/TP-favicon-32x32.png">
 
 </head>
 
@@ -276,25 +276,27 @@
             <div class="white-block white-block-right"></div>
             <h2 class="section-heading">Kontakt</h2>
             <div class="wrapper">
-                <form class="contact__form">
+                <form action="mail.php" method="post" class="contact__form">
                     <div class="contact__form-top">
 
                         <label for="name" class="contact__form-label">Imie i nazwisko</label>
-                        <input type="text" name="" id="name" class="contact__form-input">
+                        <input type="text" name="name" id="name" required class="contact__form-input">
 
                         <label for="email" class="contact__form-label">Adres e-mail</label>
-                        <input type="text" name="email" id="" class="contact__form-input">
+                        <input type="email" name="email" id="email" required class="contact__form-input">
                     </div>
 
                     <label for="msg" class="contact__form-label">Wiadomość:</label>
-                    <textarea name="msg" id="msg" class="contact__form-textarea"></textarea>
+                    <textarea name="msg" id="msg" required class="contact__form-textarea"></textarea>
 
                     <button type="submit" class="contact__form-btn btn-special-animation">Wyślij</button>
-
                 </form>
             </div>
+            <p class="msg-status  ">Komunikat wiadomości</p>
         </section>
     </main>
+
+
     <footer class="footer">
 
         <div class="wrapper">

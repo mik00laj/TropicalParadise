@@ -511,6 +511,24 @@ body {
 .contact__form-btn::before {
   background-color: #164dcc;
 }
+.contact .msg-status {
+  display: none;
+  position: absolute;
+  top: 12%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  padding: 3rem;
+  width: 600px;
+  border-radius: 12px;
+  font-size: 2.4rem;
+}
+.contact .msg-status--success {
+  background-color: hsl(143, 83%, 55%);
+}
+.contact .msg-status--error {
+  background-color: hsl(9, 100%, 64%);
+}
 
 .footer {
   color: #fff;
