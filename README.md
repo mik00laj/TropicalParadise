@@ -1,4 +1,4 @@
-# TropicalParadise---course-project
+# TropicalParadise
 
 ## Description
 Simple project about travel agency based on Flexbox.
